@@ -11,7 +11,7 @@ import SwiftUI
 struct kusalya_ios_applicationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
