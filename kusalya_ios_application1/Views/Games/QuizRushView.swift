@@ -92,7 +92,7 @@ struct QuizRushView: View {
             Spacer()
 
             if let question = viewModel.currentQuestion {
-                Text(decodeHTML(question.question))
+                Text(question.question)
                     .font(.title2)
                     .bold()
                     .multilineTextAlignment(.center)
@@ -105,8 +105,11 @@ struct QuizRushView: View {
                     ForEach(viewModel.currentAnswers, id: \.self) { answer in
                         Button {
                             viewModel.answerTapped(answer)
+                            if case .finished = viewModel.state {
+                                saveQuizSessionIfNeeded()
+                            }
                         } label: {
-                            Text(decodeHTML(answer))
+                            Text(answer)
                                 .font(.headline)
                                 .bold()
                                 .multilineTextAlignment(.center)
@@ -157,6 +160,7 @@ struct QuizRushView: View {
             }
             
             Button {
+                hasSavedSession = false
                 Task {
                     await viewModel.loadQuestions()
                 }
@@ -176,31 +180,9 @@ struct QuizRushView: View {
                     .foregroundStyle(.black)
                     .clipShape(RoundedRectangle(cornerRadius: 18))
             }
-            .onAppear {
-                saveQuizSessionIfNeeded()
-            }
         }
     }
 
-    private func decodeHTML(_ text: String) -> String {
-        guard let data = text.data(using: .utf8) else {
-            return text
-        }
-
-        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
-            .documentType: NSAttributedString.DocumentType.html,
-            .characterEncoding: String.Encoding.utf8.rawValue
-        ]
-
-        let decoded = try? NSAttributedString(
-            data: data,
-            options: options,
-            documentAttributes: nil
-        )
-
-        return decoded?.string ?? text
-    }
-    
     private func saveQuizSessionIfNeeded() {
         guard !hasSavedSession else {
             return
