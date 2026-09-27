@@ -1,7 +1,10 @@
 import SwiftUI
 import Combine
+import CoreLocation
 
 struct TapFrenzyView: View {
+    @EnvironmentObject var sessionStore: SessionStore
+    @EnvironmentObject var locationService: LocationService
     @State private var score = 0
     @State private var timeLeft = 10
     @State private var isGameOver = false
@@ -131,7 +134,22 @@ struct TapFrenzyView: View {
             Text("High Score: \(highScore)")
                 .font(.title3)
                 .bold()
-
+            
+            ShareLink(
+                item: "I just scored \(score) on Tap Frenzy — beat that!"
+            ) {
+                HStack {
+                    Image(systemName: "square.and.arrow.up")
+                    Text("Share Score")
+                        .bold()
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.white.opacity(0.9))
+                .foregroundStyle(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 18))
+            }
+            
             Button {
                 restartGame()
             } label: {
@@ -165,6 +183,13 @@ struct TapFrenzyView: View {
         if score > highScore {
             highScore = score
         }
+
+        sessionStore.addSession(
+            mode: .tapFrenzy,
+            score: score,
+            latitude: locationService.currentLocation?.latitude ?? 0.0,
+            longitude: locationService.currentLocation?.longitude ?? 0.0
+        )
     }
 
     private func restartGame() {

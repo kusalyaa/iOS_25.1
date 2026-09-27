@@ -1,7 +1,11 @@
 import SwiftUI
+import CoreLocation
 
 struct QuizRushView: View {
+    @EnvironmentObject var sessionStore: SessionStore
+    @EnvironmentObject var locationService: LocationService
     @StateObject private var viewModel = QuizViewModel()
+    @State private var hasSavedSession = false
 
     var body: some View {
         ZStack {
@@ -136,7 +140,22 @@ struct QuizRushView: View {
             Text("Best Streak: \(viewModel.streak)")
                 .font(.title3)
                 .bold()
-
+            
+            ShareLink(
+                item: "I just scored \(viewModel.score) on Quiz Rush — beat that!"
+            ) {
+                HStack {
+                    Image(systemName: "square.and.arrow.up")
+                    Text("Share Score")
+                        .bold()
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.white.opacity(0.9))
+                .foregroundStyle(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 18))
+            }
+            
             Button {
                 Task {
                     await viewModel.loadQuestions()
@@ -156,6 +175,9 @@ struct QuizRushView: View {
                     )
                     .foregroundStyle(.black)
                     .clipShape(RoundedRectangle(cornerRadius: 18))
+            }
+            .onAppear {
+                saveQuizSessionIfNeeded()
             }
         }
     }
@@ -177,5 +199,20 @@ struct QuizRushView: View {
         )
 
         return decoded?.string ?? text
+    }
+    
+    private func saveQuizSessionIfNeeded() {
+        guard !hasSavedSession else {
+            return
+        }
+
+        hasSavedSession = true
+
+        sessionStore.addSession(
+            mode: .quizRush,
+            score: viewModel.score,
+            latitude: locationService.currentLocation?.latitude ?? 0.0,
+            longitude: locationService.currentLocation?.longitude ?? 0.0
+        )
     }
 }

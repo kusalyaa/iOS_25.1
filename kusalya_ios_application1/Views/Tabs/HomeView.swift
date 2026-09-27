@@ -2,7 +2,6 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationStack {
             ZStack {
                 LinearGradient(
                     colors: [
@@ -66,7 +65,6 @@ struct HomeView: View {
             .navigationBarHidden(true)
         }
     }
-}
 
 struct GameModeCard: View {
     let title: String

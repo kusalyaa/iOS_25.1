@@ -1,5 +1,6 @@
 import SwiftUI
 import Combine
+import CoreLocation
 
 struct LightCard: Identifiable {
     let id = UUID()
@@ -7,6 +8,8 @@ struct LightCard: Identifiable {
 }
 
 struct LightItUpView: View {
+    @EnvironmentObject var sessionStore: SessionStore
+    @EnvironmentObject var locationService: LocationService
     @State private var cards: [LightCard] = Array(repeating: LightCard(), count: 3)
     @State private var score = 0
     @State private var timeLeft = 60
@@ -170,6 +173,22 @@ struct LightItUpView: View {
             Text("High Score: \(highScore)")
                 .font(.title3)
                 .bold()
+            
+            ShareLink(
+                item: "I just scored \(score) on Light It Up — beat that!"
+            ) {
+                HStack {
+                    Image(systemName: "square.and.arrow.up")
+                    Text("Share Score")
+                        .bold()
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.white.opacity(0.9))
+                .foregroundStyle(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 18))
+            }
+            
 
             Button {
                 restartGame()
@@ -240,6 +259,13 @@ struct LightItUpView: View {
         if score > highScore {
             highScore = score
         }
+
+        sessionStore.addSession(
+            mode: .lightItUp,
+            score: score,
+            latitude: locationService.currentLocation?.latitude ?? 0.0,
+            longitude: locationService.currentLocation?.longitude ?? 0.0
+        )
     }
 
     private func restartGame() {

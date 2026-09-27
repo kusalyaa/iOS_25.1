@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		EFDA157A2FFD22C100E70660 /* kusalya_ios_application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kusalya_ios_application.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDA16D42FFFD41E00E70660 /* kusalya_ios_application1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kusalya_ios_application1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EFDA157C2FFD22C100E70660 /* kusalya_ios_application */ = {
+		EFDA16D62FFFD41E00E70660 /* kusalya_ios_application1 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = kusalya_ios_application;
+			path = kusalya_ios_application1;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EFDA15772FFD22C100E70660 /* Frameworks */ = {
+		EFDA16D12FFFD41E00E70660 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EFDA15712FFD22C100E70660 = {
+		EFDA16CB2FFFD41E00E70660 = {
 			isa = PBXGroup;
 			children = (
-				EFDA157C2FFD22C100E70660 /* kusalya_ios_application */,
-				EFDA157B2FFD22C100E70660 /* Products */,
+				EFDA16D62FFFD41E00E70660 /* kusalya_ios_application1 */,
+				EFDA16D52FFFD41E00E70660 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EFDA157B2FFD22C100E70660 /* Products */ = {
+		EFDA16D52FFFD41E00E70660 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EFDA157A2FFD22C100E70660 /* kusalya_ios_application.app */,
+				EFDA16D42FFFD41E00E70660 /* kusalya_ios_application1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EFDA15792FFD22C100E70660 /* kusalya_ios_application */ = {
+		EFDA16D32FFFD41E00E70660 /* kusalya_ios_application1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFDA15852FFD22C300E70660 /* Build configuration list for PBXNativeTarget "kusalya_ios_application" */;
+			buildConfigurationList = EFDA16DF2FFFD41F00E70660 /* Build configuration list for PBXNativeTarget "kusalya_ios_application1" */;
 			buildPhases = (
-				EFDA15762FFD22C100E70660 /* Sources */,
-				EFDA15772FFD22C100E70660 /* Frameworks */,
-				EFDA15782FFD22C100E70660 /* Resources */,
+				EFDA16D02FFFD41E00E70660 /* Sources */,
+				EFDA16D12FFFD41E00E70660 /* Frameworks */,
+				EFDA16D22FFFD41E00E70660 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				EFDA157C2FFD22C100E70660 /* kusalya_ios_application */,
+				EFDA16D62FFFD41E00E70660 /* kusalya_ios_application1 */,
 			);
-			name = kusalya_ios_application;
+			name = kusalya_ios_application1;
 			packageProductDependencies = (
 			);
-			productName = kusalya_ios_application;
-			productReference = EFDA157A2FFD22C100E70660 /* kusalya_ios_application.app */;
+			productName = kusalya_ios_application1;
+			productReference = EFDA16D42FFFD41E00E70660 /* kusalya_ios_application1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EFDA15722FFD22C100E70660 /* Project object */ = {
+		EFDA16CC2FFFD41E00E70660 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					EFDA15792FFD22C100E70660 = {
+					EFDA16D32FFFD41E00E70660 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = EFDA15752FFD22C100E70660 /* Build configuration list for PBXProject "kusalya_ios_application" */;
+			buildConfigurationList = EFDA16CF2FFFD41E00E70660 /* Build configuration list for PBXProject "kusalya_ios_application1" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = EFDA15712FFD22C100E70660;
+			mainGroup = EFDA16CB2FFFD41E00E70660;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = EFDA157B2FFD22C100E70660 /* Products */;
+			productRefGroup = EFDA16D52FFFD41E00E70660 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFDA15792FFD22C100E70660 /* kusalya_ios_application */,
+				EFDA16D32FFFD41E00E70660 /* kusalya_ios_application1 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EFDA15782FFD22C100E70660 /* Resources */ = {
+		EFDA16D22FFFD41E00E70660 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EFDA15762FFD22C100E70660 /* Sources */ = {
+		EFDA16D02FFFD41E00E70660 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EFDA15832FFD22C300E70660 /* Debug */ = {
+		EFDA16DD2FFFD41F00E70660 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		EFDA15842FFD22C300E70660 /* Release */ = {
+		EFDA16DE2FFFD41F00E70660 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,7 +244,7 @@
 			};
 			name = Release;
 		};
-		EFDA15862FFD22C300E70660 /* Debug */ = {
+		EFDA16E02FFFD41F00E70660 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -253,17 +253,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to save where each game session was completed.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kusalya.kusalya-ios-application";
+				PRODUCT_BUNDLE_IDENTIFIER = "kusalya.kusalya-ios-application1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -275,7 +277,7 @@
 			};
 			name = Debug;
 		};
-		EFDA15872FFD22C300E70660 /* Release */ = {
+		EFDA16E12FFFD41F00E70660 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -284,17 +286,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location to save where each game session was completed.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kusalya.kusalya-ios-application";
+				PRODUCT_BUNDLE_IDENTIFIER = "kusalya.kusalya-ios-application1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -309,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EFDA15752FFD22C100E70660 /* Build configuration list for PBXProject "kusalya_ios_application" */ = {
+		EFDA16CF2FFFD41E00E70660 /* Build configuration list for PBXProject "kusalya_ios_application1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EFDA15832FFD22C300E70660 /* Debug */,
-				EFDA15842FFD22C300E70660 /* Release */,
+				EFDA16DD2FFFD41F00E70660 /* Debug */,
+				EFDA16DE2FFFD41F00E70660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFDA15852FFD22C300E70660 /* Build configuration list for PBXNativeTarget "kusalya_ios_application" */ = {
+		EFDA16DF2FFFD41F00E70660 /* Build configuration list for PBXNativeTarget "kusalya_ios_application1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EFDA15862FFD22C300E70660 /* Debug */,
-				EFDA15872FFD22C300E70660 /* Release */,
+				EFDA16E02FFFD41F00E70660 /* Debug */,
+				EFDA16E12FFFD41F00E70660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EFDA15722FFD22C100E70660 /* Project object */;
+	rootObject = EFDA16CC2FFFD41E00E70660 /* Project object */;
 }
